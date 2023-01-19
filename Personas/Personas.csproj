@@ -81,12 +81,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Mensajes\ConsultaMessage.cs" />
     <Compile Include="Mensajes\NacionalidadMessage.cs" />
     <Compile Include="Mensajes\PersonaMessage.cs" />
     <Compile Include="Modelo\Persona.cs" />
+    <Compile Include="Vista Modelo\ConsultaPersonaVM.cs" />
     <Compile Include="Vista Modelo\DialogoVM.cs" />
     <Compile Include="Vista Modelo\ListadoUserControlVM.cs" />
     <Compile Include="Vista Modelo\NuevaPersonaUserControlVM.cs" />
+    <Compile Include="Vistas\ConsultaPersona.xaml.cs">
+      <DependentUpon>ConsultaPersona.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\DialogoHijo.xaml.cs">
       <DependentUpon>DialogoHijo.xaml</DependentUpon>
     </Compile>
@@ -96,6 +101,10 @@
     <Compile Include="Vistas\NuevaPersonaUserControl.xaml.cs">
       <DependentUpon>NuevaPersonaUserControl.xaml</DependentUpon>
     </Compile>
+    <Page Include="Vistas\ConsultaPersona.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vistas\DialogoHijo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

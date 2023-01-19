@@ -42,6 +42,12 @@ namespace Personas.Vista_Modelo
                     Personas.Add(m.Value);
                 }
                 );
+            WeakReferenceMessenger.Default.Register<ListadoUserControlVM,ConsultaMessage>(
+                 this, (r, m) =>
+                {
+                    m.Reply(r.PersonaSeleccionada);
+                }
+                );
         }
     }
 }

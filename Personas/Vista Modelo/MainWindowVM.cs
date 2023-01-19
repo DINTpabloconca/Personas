@@ -21,6 +21,8 @@ namespace Personas.Vista_Modelo
         }
         public RelayCommand NuevaPersonaCommand { get; }
         public RelayCommand ListadoPersonasCommand { get; }
+        public RelayCommand ConsultaPersonasCommand { get; }
+
 
         private ServicioNavegacion servicioNavegacion;
 
@@ -29,6 +31,7 @@ namespace Personas.Vista_Modelo
             servicioNavegacion = new ServicioNavegacion();
             NuevaPersonaCommand = new RelayCommand(CargarNuevaPersona);
             ListadoPersonasCommand = new RelayCommand(CargarListadoPersonas);
+            ConsultaPersonasCommand = new RelayCommand(CargarConsultaPersonas);
         }
         public void CargarNuevaPersona()
         {
@@ -37,6 +40,10 @@ namespace Personas.Vista_Modelo
         public void CargarListadoPersonas()
         {
             ContenidoVentana = servicioNavegacion.ObtenerListadoUsuarios();
+        }
+        public void CargarConsultaPersonas()
+        {
+            ContenidoVentana = servicioNavegacion.ObtenerConsultaPersonas();
         }
     }
 }

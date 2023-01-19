@@ -22,6 +22,10 @@ namespace Personas.Servicios
         {
             return listado;
         }
+        public ConsultaPersona ObtenerConsultaPersonas()
+        {
+            return new ConsultaPersona();
+        }
         public bool? AbrirDialogo()
         {
             DialogoHijo dialogo = new DialogoHijo();

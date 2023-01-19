@@ -10,6 +10,8 @@
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
             <Button Margin="5" Command="{Binding Path=NuevaPersonaCommand}">Nueva persona</Button>
             <Button Margin="5" Command="{Binding Path=ListadoPersonasCommand}">Listado de personas</Button>
+            <Button Margin="5" Command="{Binding Path=ConsultaPersonasCommand}">Consulta persona</Button>
+
         </StackPanel>
         <Border BorderBrush="Black" BorderThickness="1" Margin="5">
             <ContentControl Content="{Binding Path=ContenidoVentana}"></ContentControl>
