@@ -8,7 +8,7 @@
         Title="DialogoHijo" Height="120" Width="200" ShowInTaskbar="False" ResizeMode="NoResize">
     <StackPanel>
         <TextBlock Text="Nacionalidad"></TextBlock>
-        <TextBox Text="{Binding Mensaje}" Width="60" HorizontalAlignment="Left" Margin="5"></TextBox>
+        <TextBox Text="{Binding Mensaje}" Width="140" HorizontalAlignment="Left" Margin="5,5,0,5"></TextBox>
         <StackPanel Orientation="Horizontal">
             <Button IsDefault="True" Click="Button_Click" Content="Aceptar" Margin="5"></Button>
             <Button IsCancel="True" Content="Cancelar" Margin="5"></Button>

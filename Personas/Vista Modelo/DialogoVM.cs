@@ -9,13 +9,7 @@ namespace Personas.Vista_Modelo
 {
     class DialogoVM : ObservableObject
     {
-        private string mensaje;
-
-        public string Mensaje
-        {
-            get { return mensaje; }
-            set { mensaje = value; }
-        }
+        
         public DialogoVM()
         {
         }
