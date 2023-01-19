@@ -1,4 +1,6 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.Messaging;
+using Personas.Mensajes;
 using Personas.Modelo;
 using System;
 using System.Collections.Generic;
@@ -34,7 +36,12 @@ namespace Personas.Vista_Modelo
             Personas.Add(new Persona(16, "Pablo", "Rumano"));
             Personas.Add(new Persona(18, "Jacinto", "Español"));
             Personas.Add(new Persona(20, "Evaristo", "Español"));
-
+            WeakReferenceMessenger.Default.Register<PersonaMessage>(
+                this, (r, m) =>
+                {
+                    Personas.Add(m.Value);
+                }
+                );
         }
     }
 }

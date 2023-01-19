@@ -81,6 +81,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Mensajes\NacionalidadMessage.cs" />
+    <Compile Include="Mensajes\PersonaMessage.cs" />
     <Compile Include="Modelo\Persona.cs" />
     <Compile Include="Vista Modelo\DialogoVM.cs" />
     <Compile Include="Vista Modelo\ListadoUserControlVM.cs" />

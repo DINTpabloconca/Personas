@@ -31,6 +31,12 @@ namespace Personas.Vistas
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = true;
+            vm.EnviarMensaje();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
         }
     }
 }

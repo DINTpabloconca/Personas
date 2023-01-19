@@ -8,14 +8,14 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
         <TextBlock Text="Nombre"></TextBlock>
-        <TextBox></TextBox>
+        <TextBox Text="{Binding Path=Nombre}"></TextBox>
         <TextBlock Text="Edad"></TextBlock>
-        <TextBox></TextBox>
+        <TextBox Text="{Binding Path=Edad}"></TextBox>
         <TextBlock Text="Nacionalidad"></TextBlock>
         <StackPanel Orientation="Horizontal">
-            <ComboBox Margin="5" Width="100" ItemsSource="{Binding Nacionalidades}"></ComboBox>
+            <ComboBox Margin="5" Width="100" SelectedItem="{Binding NacionalidadSeleccionada}"  ItemsSource="{Binding Nacionalidades}"></ComboBox>
             <Button Margin="5" Width="20" Command="{Binding Path=DialogCommand}" Content="+"></Button>
         </StackPanel>
-        <Button Width="100" HorizontalAlignment="Center" Content="Aceptar"></Button>
+        <Button Width="100" HorizontalAlignment="Center" Command="{Binding Path=AddPersonaCommand}" Content="Aceptar"></Button>
     </StackPanel>
 </UserControl>
