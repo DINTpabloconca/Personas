@@ -28,6 +28,7 @@ namespace Personas.Vista_Modelo
 
         public MainWindowVM()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(Properties.Settings.Default.clave);
             servicioNavegacion = new ServicioNavegacion();
             NuevaPersonaCommand = new RelayCommand(CargarNuevaPersona);
             ListadoPersonasCommand = new RelayCommand(CargarListadoPersonas);

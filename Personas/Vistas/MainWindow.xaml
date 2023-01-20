@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personas"
+        xmlns:properties="clr-namespace:Personas.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Icon="/Recursos/personas.ico">
     <DockPanel>
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
             <Button Margin="5" Command="{Binding Path=NuevaPersonaCommand}">Nueva persona</Button>
@@ -13,6 +14,7 @@
             <Button Margin="5" Command="{Binding Path=ConsultaPersonasCommand}">Consulta persona</Button>
 
         </StackPanel>
+        <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Left" Text="{Binding Source={x:Static properties:Settings.Default},Path=version}"></TextBlock>
         <Border BorderBrush="Black" BorderThickness="1" Margin="5">
             <ContentControl Content="{Binding Path=ContenidoVentana}"></ContentControl>
         </Border>
